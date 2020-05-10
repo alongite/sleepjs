@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sleepjs</title>
+</head>
+<body>
+    hello, sleepjs.
+    <pre>
+        <code id="code">
+            print('hello');
+            sleep(2);
+            print('world');
+        </code>
+    </pre>
+    <hr>
+    <h6>evaluate</h6>
+    <div id="output"></div>
+    <h6>evaluateCPS</h6>
+    <div id="output-cps"></div>
+    <script src="./babel.min.js"></script>
+    <script src="./evaluate.js"></script>
+    <script src="./index.js"></script>
+
+    <!-- <script src="./lambda-eval1.js"></script>
+    <script>
+        // some test code here
+        var code = "sum = lambda(x, y) x + y; print(sum(2, 3));";
+
+        // remember, parse takes a TokenStream which takes an InputStream
+        var _ast = parse(TokenStream(InputStream(code)));
+        debugger;
+        // create the global environment
+        var globalEnv = new Environment();
+
+        // define the "print" primitive function
+        globalEnv.def("print", function(txt){
+            console.log(txt);
+        });
+
+        // run the evaluator
+        evaluate(_ast, globalEnv);
+    </script> -->
+</body>
+</html>
